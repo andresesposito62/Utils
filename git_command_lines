@@ -1,1 +1,29 @@
+//Indica en carpeta estoy ahora mismo:
+pwd
 
+//Para navegar a una carpeta ponemos change directory:
+cd 
+
+//Si aparece el simbolo "~" significa que estoy en el hogar de 
+//mis documentos, en el hogar de mi usuario
+
+//Si aparece el simbolo "/" quiere decir que estoy en el home
+//es decir en la raiz del disco
+
+//para listar los elementos de una carpeta insertamos:
+ls
+
+//para listar todos los elementos d euna carpeta incluyendo los
+//archivos ocultos:
+ls -al
+
+//para limpiar la consola ingresamos:
+clear
+//o tambien podemos limpiar la consola con:
+ctrl+L
+
+//para ir a mi disco duro C
+cd /c
+
+//para devolvernos un paso atras:
+cd ..
