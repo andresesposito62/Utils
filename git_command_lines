@@ -27,3 +27,24 @@ cd /c
 
 //para devolvernos un paso atras:
 cd ..
+
+//para crear una carpeta:
+mkdir nombreCarpeta
+
+//para crear un archivo sin nada por dentro:
+touch vacio.txt
+
+//para ver el contenido de un archivo:
+cat nombreDelArchivo
+
+//para ver la historia completa de todos 
+//los comandos escritos hasta el momento:
+history
+
+//para borrar un archivo:
+rm nombreDelArchivoABorrar
+//se debe tener cuidado ps se puede borrar el disco duro
+//del pc si se ejecuta incorrectamente
+
+//para ver las especifiaciones de cada comando:
+comandoGit --help
