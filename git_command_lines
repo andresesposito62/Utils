@@ -48,3 +48,19 @@ rm nombreDelArchivoABorrar
 
 //para ver las especifiaciones de cada comando:
 comandoGit --help
+
+//Para iniciar Git en una carpeta:
+git init
+
+//para ver el status actual:
+git status
+
+//para trackear un archivo se inresa:
+git add historia.txt
+
+//para sacar un archivo del trackeo:
+git rm --cached historia.txt
+
+//para hacer commit:
+git commit -m "Mensaje detallado"
+
