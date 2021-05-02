@@ -64,3 +64,33 @@ git rm --cached historia.txt
 //para hacer commit:
 git commit -m "Mensaje detallado"
 
+//para ver todas las configuraciones que tiene git actualente:
+git config --list
+
+//para cambiar los usuarios globales
+git config --global user.name  "Andres Esposito"
+git config --global user.email "andresesposito62@gmail.com"
+
+//para agregar los cambios de todos los archivos usamos:
+git add .
+
+//Para ver la historia de cambios de archivo:
+git log historia.txt
+
+//para ver los cambios que han existido sobre un archivo:
+git show nombredelarchivo
+
+//para ver la diferencia entre una version anterior
+// y la version actual:
+diff --git a/nombredelarchivo b/nombredelarchivo
+
+//paraver la diferencia entre dos commits:
+git diff idcommitaA idcommitB
+
+//VIM: editor de texto de la consola
+//para enviar el commit y salir del Vim:
+Esc +shift +zz 
+
+
+
+ 
