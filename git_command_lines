@@ -91,6 +91,13 @@ git diff idcommitaA idcommitB
 //para enviar el commit y salir del Vim:
 Esc +shift +zz 
 
+//para volver  a un commit anterior sin guardar nada en staging
+//Se debetener cuidado porque esto borra todos los commits anteriores
+git reset ideDelCommit --hard
+
+//para volver a un commit guardando los datos de stagin(los de add .)
+git reset ideDelCommit --soft
 
 
  
+
