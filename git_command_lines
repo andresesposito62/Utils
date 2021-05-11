@@ -56,7 +56,7 @@ git init
 git status
 
 //para trackear un archivo se inresa:
-git add historia.txt
+git add historia
 
 //para sacar un archivo del trackeo:
 git rm --cached historia.txt
@@ -76,6 +76,9 @@ git add .
 
 //Para ver la historia de cambios de archivo:
 git log historia.txt
+
+//Para ver los cambios en cada commit:
+git log --stat
 
 //para ver los cambios que han existido sobre un archivo:
 git show nombredelarchivo
@@ -98,6 +101,64 @@ git reset ideDelCommit --hard
 //para volver a un commit guardando los datos de stagin(los de add .)
 git reset ideDelCommit --soft
 
+//para ver la diferencia entre el repositorio y lo que esta
+//en staging:
+git diff
 
+//para ir a un commit especifico y traer un archivo especifico:
+git checkout idDelCommit archivoQueSeQuiereDeRegreso
+
+//para volver al master
+git checkout master archivoQueSeQuiereIr
  
+////para eliminar archivos de Git sin eliminar su historial
+//del sistema de versiones, existen dos maneras:
+
+//1)Eliminar los archivos del area de staging y del proximo
+// commit pero los mantiene en el disco duro:
+git rm --cached
+
+//2)Eliminar los archivos de Git y del disco duro:
+git rm --force
+
+
+//Este comando nos ayuda a volver en el tiempo.
+//Pero no como git checkout que nos deja ir, mirar,
+// pasear y volver. Con git reset volvemos al pasado sin
+//la posibilidad de volver al futuro. Borramos la historia
+// y la debemos sobreescribir. No hay vuelta atrás:
+
+
+*//Para borrar todo el historial y los registros pero guardamos
+//los cambios en staging:
+git reset --soft
+
+*//Borra todo(borra toda la informacion de los commits y del area
+//staging):
+git reset --hard
+
+*//Comando para sacar archivos de area se staging(no los borra 
+//ni nada, solo para que los ultimos cambios de estos archivos
+// no se envien al commit):
+git reset HEAD
+
+
+////////////ESTRUCTURA DE TRABAJO GIT/////////////////
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////// 
+//                                                                                                                //  
+//                                                                                                                //    
+//  (Untracked o                 (Tracked o                                                                       //        
+//  no rastreado)                rastreado)                                                                       //       
+//  //////////////              ///////////////                ///////////////               ///////////////      //
+//  //Directorio//              //Preparacion//                //Repositorio//<--git fetch---//Repositorio//      //  
+//  //de trabajo//---git add--> //o Staging  //---git comit--> // Local     //---git push--->//Remoto     //      // 
+//  //////////////              ///////////////                ///////////////               ///////////////      //
+//      ^  ^                                                        |  ^                              |           //
+//      |  |_________________________git merge______________________|  |                          git pull        //
+//      |                                                              |                              |           //
+//      |______________________________________________________________|______________________________|           //                               
+//                                                                                                                //         
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
