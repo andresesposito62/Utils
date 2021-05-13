@@ -162,3 +162,28 @@ git reset HEAD
 //                                                                                                                //         
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+
+//Para ver donde esta mi Head(Head= indicador de cual version
+ de commit estoy viendo de los ultimos arvhivos que ), usamos el
+//comando:
+Git show
+
+//Para Crear una nueva rama:
+git branch nombreDeLaNuevaRama
+
+//Para moverme a la otra rama usamos:
+git checkout nombreDeLaRamaDeseada
+
+//para eliminar los ultimos cambios hechos a un archivo(antes 
+// de que hubieramos hecho add):
+git restore nombreDelArchivo
+
+
+//para ver el listado de ramas:
+git branch
+
+//para realizar un merge nos posicionamos en la rama donde
+//queremos que se reciba e ingresamos:
+git merge nombreDeLaOtraRama
+
+
