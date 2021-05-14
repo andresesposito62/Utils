@@ -199,6 +199,12 @@ git remote add origin https://github.com/andresesposito62/Utils.git
 //Para consultar si tenemos ya un origen remoto:
 git remote -v
 
+//para traer los cambios del origen remoto a una rama en
+//especifica nuestra(para nuestro caso main), se debe hacer 
+//esto antes de hacer un push porque peude que algun compañero
+//haya modificado el repositorio remoto y habria conflictos:
+git pull origin main
+
 //para enviarle al origen(en este caos a la rama main):
 git push origin main
 
