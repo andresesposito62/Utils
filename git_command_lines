@@ -186,4 +186,20 @@ git branch
 //queremos que se reciba e ingresamos:
 git merge nombreDeLaOtraRama
 
+//Para tomar una rama entera y pegarla de regreso a otra
+// rama(para este caso al master) solo se debe usar en repositorios locales, hacerlo para 
+//repositorios remotos es muy mala practica. Rebase reescribe
+//la historia del repositorio
+git rebase master
+
+//para decirle a git que vamos a agregar un origen remoto
+//de nuestros archivos(usando HTTPS):
+git remote add origin https://github.com/andresesposito62/Utils.git
+
+
+//Para consultar si tenemos ya un origen remoto:
+git remote -v
+
+//para enviarle al origen(en este caos a la rama master):
+git push origin master
 
