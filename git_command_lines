@@ -196,7 +196,6 @@ git rebase master
 //de nuestros archivos(usando HTTPS):
 git remote add origin https://github.com/andresesposito62/Utils.git
 
-
 //Para consultar si tenemos ya un origen remoto:
 git remote -v
 
