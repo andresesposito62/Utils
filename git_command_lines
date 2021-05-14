@@ -200,6 +200,6 @@ git remote add origin https://github.com/andresesposito62/Utils.git
 //Para consultar si tenemos ya un origen remoto:
 git remote -v
 
-//para enviarle al origen(en este caos a la rama master):
-git push origin master
+//para enviarle al origen(en este caos a la rama main):
+git push origin main
 
