@@ -202,5 +202,3 @@ git remote -v
 //para enviarle al origen(en este caos a la rama main):
 git push origin main
 
-//cambio de pruebaaaaaaa
-
