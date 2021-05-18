@@ -178,6 +178,9 @@ git checkout nombreDeLaRamaDeseada
 // de que hubieramos hecho add):
 git restore nombreDelArchivo
 
+//Para sacar de staging algun archivo cambiado cambio(despues de haber hecho add):
+git restore --staged Nombre de archivo
+
 
 //para ver el listado de ramas:
 git branch
@@ -207,4 +210,29 @@ git pull origin main
 
 //para enviarle al origen(en este caos a la rama main):
 git push origin main
+
+//para generar la llave ssh(con algoritmo rsa, con 
+//complejidad 4096) y conectada al correo
+//"andresesposito62@gmail.com", debe ser una por
+//cada repositorio(si tengo 3 pc son 3 llaves publicas
+// y privadas, 1 en cada pc sin compartir por ningun motivo
+//la privada)
+ssh-keygen -t rsa -b 4096 -C "andresesposito62@gmail.com"
+
+//para verificar que el servidor ssh este encendido:
+eval $(ssh-agent -s)
+
+//para agregar la llave privada(nunca se debe mostrar
+//ni compartir) al servidor, ~(shortcut para la
+//direccion del home)
+ssh-add ~/.ssh/id_rsa
+
+//para clonar el proyecto remoto a nuestor equipo local
+//usando ssh tomamos el link de clonar por shh de gitub
+//estando en la carpeta local de nuestro proyecto
+git remote set-url origin git@github.com:andresesposito62/ControlApp.git
+
+
+
+
 
