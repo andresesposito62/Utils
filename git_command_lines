@@ -264,8 +264,7 @@ git push origin :refs/tags/nombreDelTagABorrar
 
 //Para clonar un repositorio:
 git clone linkRepositorioRemoto 
-//Si el repositorio es publico no va a pedir contraseña
-//ni usuario
+//Si el repositorio es publico no va a pedir contraseña ni usuario
 
 
 
