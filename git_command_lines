@@ -259,7 +259,7 @@ git tag -d nombreDelTag
 //para borrar un tag en el repositorio remoto:
 git push origin :refs/tags/nombreDelTagABorrar
 
-//el Git Init es si se quiere crear el repositorio
+//el git init es si se quiere crear el repositorio
 //Si se desea clonar el repositorio remoto no se debe usar
 
 //Para clonar un repositorio:
