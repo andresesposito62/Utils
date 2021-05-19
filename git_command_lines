@@ -181,9 +181,14 @@ git restore nombreDelArchivo
 //Para sacar de staging algun archivo cambiado cambio(despues de haber hecho add):
 git restore --staged Nombre de archivo
 
-
 //para ver el listado de ramas:
 git branch
+
+//para ver las ramas que existen y su historia:
+git show-branch --all
+
+//para ver de manera muy visual las ramas:
+gitk 
 
 //para realizar un merge nos posicionamos en la rama donde
 //queremos que se reciba e ingresamos:
@@ -231,6 +236,38 @@ ssh-add ~/.ssh/id_rsa
 //usando ssh tomamos el link de clonar por shh de gitub
 //estando en la carpeta local de nuestro proyecto
 git remote set-url origin git@github.com:andresesposito62/ControlApp.git
+
+//Para ver toda la historia de lo que ha pasado en el repositorio:
+git log --all --graph --decorate --oneline
+//Para ingresar un shortcut para este comando tan largo:
+alias arbol_proyecto="git log --all --graph --decorate --oneline"
+//y luego en la consola ejecutamos:
+arbol_proyecto
+
+//Para crear un Tag(para este carso version 0.1):
+git tag -a v0.1 -m "Mensaje" HashDelCommit
+
+//para ver la lista de todos los tags:
+git show-ref --tags
+
+//para enviar un tag al repositorio remoto:
+git push origin --tags
+
+//para borrar un tag indeseado en el repo local:
+git tag -d nombreDelTag
+
+//para borrar un tag en el repositorio remoto:
+git push origin :refs/tags/nombreDelTagABorrar
+
+//el Git Init es si se quiere crear el repositorio
+//Si se desea clonar el repositorio remoto no se debe usar
+
+//Para clonar un repositorio:
+git clone linkRepositorioRemoto 
+//Si el repositorio es publico no va a pedir contraseña
+//ni usuario
+
+
 
 
 
