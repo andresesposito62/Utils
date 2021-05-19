@@ -67,7 +67,7 @@ git commit -m "Mensaje detallado"
 //para ver todas las configuraciones que tiene git actualente:
 git config --list
 
-//para cambiar los usuarios globales
+//para cambiar los usuarios globales(correo y usuario)
 git config --global user.name  "Andres Esposito"
 git config --global user.email "andresesposito62@gmail.com"
 
