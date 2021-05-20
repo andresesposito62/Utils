@@ -272,6 +272,12 @@ git stach
 //para regresar al stash que teniamos:
 git stash pop
 
+//para poner un stach en una rama(se crea automaticamente)
+git stach branch nombreDeLaRama
+
+//para borrar lo que hay en un stash:
+git stash drop
+
 
 
 
