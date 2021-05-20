@@ -287,7 +287,8 @@ git cherry-pick HashDelCommit
 //este caso readme_mejorado)
 git merge readme-mejorado
 
-//para pegar los cambios actuales en el commit anterior:
+//para pegar los cambios actuales en el commit anterior
+//(primero se debe hacer git add):
 git commit --amend
 
 
