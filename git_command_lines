@@ -278,6 +278,18 @@ git stach branch nombreDeLaRama
 //para borrar lo que hay en un stash:
 git stash drop
 
+//para traernos un commit especifico viejo de otra rama 
+//Este comando es una mala practica:
+git cherry-pick HashDelCommit
+//luego de esto se debe hacer un merge desde la rama 
+//donde va a quedar la fusion(para este caso main) y
+//trayendo desde donde se va a hacer la fusion(para
+//este caso readme_mejorado)
+git merge readme-mejorado
+
+//para pegar los cambios actuales en el commit anterior:
+git commit --amend
+
 
 
 
