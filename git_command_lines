@@ -94,13 +94,6 @@ git diff idcommitaA idcommitB
 //para enviar el commit y salir del Vim:
 Esc +shift +zz 
 
-//para volver  a un commit anterior sin guardar nada en staging
-//Se debetener cuidado porque esto borra todos los commits anteriores
-git reset ideDelCommit --hard
-
-//para volver a un commit guardando los datos de stagin(los de add .)
-git reset ideDelCommit --soft
-
 //para ver la diferencia entre el repositorio y lo que esta
 //en staging:
 git diff
@@ -291,7 +284,17 @@ git merge readme-mejorado
 //(primero se debe hacer git add):
 git commit --amend
 
+//Para ver todo lo que ha pasado(en caso de un error
+//muy grave buscamos el Hash del ultimo commit que
+//estuvo correcto):
+git reflog
 
+//para volver  a un commit anterior sin guardar nada en staging
+//Se debetener cuidado porque esto borra todos los commits anteriores
+git reset --hard ideDelCommit
+
+//para volver a un commit guardando los datos de stagin(los de add .)
+git reset --soft ideDelCommit
 
 
 
