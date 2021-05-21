@@ -177,6 +177,12 @@ git restore --staged Nombre de archivo
 //para ver el listado de ramas:
 git branch
 
+//para ver las ramas en el servidor:
+git branch -r
+
+//para ver las ramas locales y remotas:
+git branch -a
+
 //para ver las ramas que existen y su historia:
 git show-branch --all
 
@@ -295,6 +301,13 @@ git reset --hard ideDelCommit
 
 //para volver a un commit guardando los datos de stagin(los de add .)
 git reset --soft ideDelCommit
+
+//para obtener informacion sobre un commando:
+git comandoGit --help
+
+
+
+
 
 
 
