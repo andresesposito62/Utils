@@ -19,7 +19,22 @@
       `city` VARCHAR(255) NULL,
       `address` VARCHAR(255) NULL,
       PRIMARY KEY (`person_id`));
+      
+ *Insertar Dato:
+ 
+      INSERT INTO `platziblog`.`people` (`person_id`, `last_name`, `first_name`, `city`, `address`) VALUES ('2', 'Esposito', 'karen', 'bogota', ' montecarlo 2');
 
-Crear View:
+
+*Crear View:
+
+    USE `platziblog`;
+    CREATE  OR REPLACE VIEW `platzi_people` AS
+    SELECT * FROM platziblog.people;
+
+*Modificar tabla:
+
+    ALTER TABLE `platziblog`.`people` 
+    ADD COLUMN `date_of_birth` DATETIME NULL AFTER `address`;
 
     
+ 
