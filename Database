@@ -12,29 +12,55 @@
     
 *Crear Tabla: 
 
-    CREATE TABLE `platziblog`.`people` (
-      `person_id` INT NOT NULL AUTO_INCREMENT,
-      `last_name` VARCHAR(255) NULL,
-      `first_name` VARCHAR(255) NULL,
-      `city` VARCHAR(255) NULL,
-      `address` VARCHAR(255) NULL,
-      PRIMARY KEY (`person_id`));
+    CREATE TABLE platzi_test.people (
+      person_id INT NOT NULL AUTO_INCREMENT,
+      last_name VARCHAR(255) NULL,
+      first_name VARCHAR(255) NULL,
+      city VARCHAR(255) NULL,
+      address VARCHAR(255) NULL,
+      PRIMARY KEY (person_id));
       
- *Insertar Dato:
- 
-      INSERT INTO `platziblog`.`people` (`person_id`, `last_name`, `first_name`, `city`, `address`) VALUES ('2', 'Esposito', 'karen', 'bogota', ' montecarlo 2');
-
-
 *Crear View:
 
-    USE `platziblog`;
-    CREATE  OR REPLACE VIEW `platzi_people` AS
+    USE platziblo`;
+    CREATE  OR REPLACE VIEW platzi_people AS
     SELECT * FROM platziblog.people;
 
 *Modificar tabla:
 
-    ALTER TABLE `platziblog`.`people` 
-    ADD COLUMN `date_of_birth` DATETIME NULL AFTER `address`;
-
+    ALTER TABLE platziblog.people 
+    ADD COLUMN date_of_birth DATETIME NULL AFTER address;
     
+    
+ *Borrar(TENER CUIDADO):
+  
+      DROP TABLE platziblog.people;
+      DROP DATABASE platziblog;
+      
+      
+ *Insertar dato:
+  
+      INSERT INTO platzi_test.people(last_name, first_name, address, city)
+      VALUES('Hernández','Laura', 'Calle 21', 'Monterrey');
+    
+ *Update dato:
+ 
+      UPDATE platzi_test.people
+      SET last_name = 'Chávez', city = 'Mérida'
+      WHERE person_id = 1;
+      
+*Borrar dato(si se usa sin where se borrara toda la tabla):
+
+    DELETE FROM platzi_test.people
+    WHERE person_id = 1;
+    
+*Seleccionar datos:
+
+    SELECT first_name, last_name
+    FROM platzi_test.people;
+    
+    SELECT *
+    FROM platzi_test.people
+    WHERE person_id = 2;
+
  
