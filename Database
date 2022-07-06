@@ -62,5 +62,17 @@
     SELECT *
     FROM platzi_test.people
     WHERE person_id = 2;
+    
+    
+    
+SELECT *
+FROM platziblog.posts
+WHERE fecha_publicacion > '2024';
+
+insert into platziblog.usuarios(login,password,nickname,email)
+values('login','123456','andres65','andresesposito65@gmail.com')
+
+
+  
 
  
