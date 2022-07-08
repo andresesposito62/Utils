@@ -72,7 +72,19 @@ WHERE fecha_publicacion > '2024';
 insert into platziblog.usuarios(login,password,nickname,email)
 values('login','123456','andres65','andresesposito65@gmail.com')
 
+SELECT titulo, fecha_publicacion, estatus 
+FROM platziblog.posts;
 
+
+*Para colocar nombres personalizados al encabezado de las columnas:
+
+    SELECT id, titulo AS Encabezado, fecha_publicacion AS Publicado_en, estatus AS Estatus 
+    FROM platziblog.posts;
+    
+*Para traer el numero de registros:
+
+    SELECT COUNT(*) AS numero_post
+    FROM platziblog.posts;
   
 
  
