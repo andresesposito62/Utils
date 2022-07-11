@@ -86,5 +86,58 @@ FROM platziblog.posts;
     SELECT COUNT(*) AS numero_post
     FROM platziblog.posts;
   
+*Left Join entre usuarios con posts:
 
- 
+    SELECT *
+    FROM usuarios
+    left join posts on usuarios.id = posts.usuario_id;
+    
+    
+    SELECT *
+    FROM usuarios
+    left join posts on usuarios.id = posts.usuario_id
+    where posts.usuario_id is null;
+    
+    
+*Right Join entre usuarios con posts:
+
+    SELECT *
+    FROM usuarios
+    right join posts on usuarios.id = posts.usuario_id;
+    
+    SELECT *
+    FROM usuarios
+    right join posts on usuarios.id = posts.usuario_id
+    where posts.usuario_id is null;
+    
+    
+*Inner Join:
+
+    SELECT *
+    FROM usuarios
+    inner join posts on usuarios.id = posts.usuario_id;
+    
+    
+*Outer Join:
+
+  -Union:
+  
+    SELECT *
+    FROM usuarios
+    left join posts on usuarios.id = posts.usuario_id
+    union    
+    SELECT *
+    FROM usuarios
+    right join posts on usuarios.id = posts.usuario_id;
+
+  -Diferencia Simetrica:
+  
+    SELECT *
+    FROM usuarios
+    left join posts on usuarios.id = posts.usuario_id
+    where posts.usuario_id is null
+    union
+    SELECT *
+    FROM usuarios
+    right join posts on usuarios.id = posts.usuario_id
+    where posts.usuario_id is null;
