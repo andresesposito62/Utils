@@ -141,3 +141,78 @@ FROM platziblog.posts;
     FROM usuarios
     right join posts on usuarios.id = posts.usuario_id
     where posts.usuario_id is null;
+
+
+*From:
+
+    select *
+    from posts
+    where id <= 7;
+    
+    select *
+    from posts
+    where estatus = 'activo';
+    
+    select *
+    from posts
+    where estatus != 'inactivo';
+    
+    -Para buscar registros con cadenas que incluyan ciertas palabras:
+    
+        select *
+        from posts
+        where titulo like '%prueba%';
+        
+
+    -Para buscar registros con cadenas que inicien con cierta palabra:
+    
+        select *
+        from posts
+        where titulo like 'prueba%';
+        
+        
+      -Para buscar registros con cadenas que terminen con cierta palabra:
+    
+        select *
+        from posts
+        where titulo like '%prueba';
+        
+        
+      -Para filtrar por una fecha:
+        select *
+        from posts
+        where fecha_publicacion > '2025-01-01';
+        
+        select *
+        from posts
+        where fecha_publicacion between '2023-01-01' and '2025-01-01';
+        
+        select *
+        from posts
+        where year(fecha_publicacion) between '2023' and '2024';
+
+      -para filtrar ids:
+      
+        select *
+        from posts
+        where id between 6 and 7;
+        
+      -para buscar nulos:
+      
+        select *
+        from posts
+        where categoria_id is null;
+
+      -para buscar no  nulos:
+        select *
+        from posts
+        where categoria_id is not null;
+        
+        
+      -para varios filtros al mismo tiempo:
+        select *
+        from posts
+        where categoria_id is not null
+        AND estatus = 'activo'
+        and id < 7;
+    
