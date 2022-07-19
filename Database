@@ -215,4 +215,52 @@ FROM platziblog.posts;
         where categoria_id is not null
         AND estatus = 'activo'
         and id < 7;
+        
+        
+  *Para agrupar y mostrar datos:
+  
+      select estatus, count(*)post_quantity
+      from posts
+      group by estatus;
+      
+  
+      select year(fecha_publicacion) as post_year, count(*) as post_quantity
+      from posts
+      group by post_year;
+      
+      
+      select monthname(fecha_publicacion) as post_month, count(*) as post_quantity
+      from posts
+      group by post_month;
+      
+      select estatus, monthname(fecha_publicacion) as post_month, count(*) as post_quantity
+      from posts
+      group by estatus, post_month;
+      
+      
+*Para ordenar los datos:
+
+      select *
+      from posts
+      order by fecha_publicacion asc;
+      
+      select *
+      from posts
+      order by fecha_publicacion desc;
+      
+      select *
+      from posts
+      order by titulo asc;
+      
+      select *
+      from posts
+      order by titulo desc;
+      
+      -Para traer ordenado pero con limite:
+      
+          select *
+          from posts
+          order by fecha_publicacion asc
+          limit 3;
+
     
