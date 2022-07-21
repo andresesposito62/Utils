@@ -1,3 +1,14 @@
+                                                            De pregunta a Query
+                                                            
+                                                            
+SELECT = lo que quieor mostrar
+FROM =  de donde voy a tomar los datos
+WHERE = los filtros de los datos que queiro mostrar
+GROUP BY = los rubros por los que me interesa agrupar la informacion
+ORDER BY = el orden en que quiero presentar mi informacion
+HAVING = los filtros que quiero que mis datos agrupados tengan         
+                                                            
+                                                            
                                                             Sentencias SQL
                                                             
                                                             
