@@ -122,10 +122,213 @@ function hey(){
                                                                       
                                                                       
 //Coerciones Implicitas: el lenguaje nos ayuda y cambia de un tipo de valor a otro tipo de valor
-                                                                      
-//Es debilmentente tipado, por tanto Javascript opera de la siguiente manera:
 
-4 + "7"; //47
-4 * "7"; //28
+
+//Coercion Explicita: nosotros obligamos a que un valor cambie a otro tipo
+4 + "7"; //String 47
+4 * "7"; //number 28
 2 + true; //3
 false -3; //-3
+                                                                      
+//Es debilmentente tipado, por tanto Javascript opera de la siguiente manera:
+var a = 20;
+var stringA = String(a);
+
+var numberString = 20;
+var number = Number(numberString);
+
+
+
+                                                    TRUTHY Y FALSY
+                                                    
+
+//Casos false
+Boolean(0);
+Boolean(Nan);// Nan= not a number
+Boolean(false);
+
+//Casos true
+Boolean("a"); //cualquier letra será true
+Boolean(1); //Cualquier numero del 1 en adelante será true
+Boolean([]);//Cualquier array es true
+Boolean(true);
+Boolean(function(){}); //Cualquier funcion es verdadera
+
+
+
+
+                                                      OPERADORES
+                 
+                 
+//Operadores Binarios
+3 + 2 // number 5
+50 - 10 // number 40
+10 * 20// number 200
+20 / 2 //number 10
+
+"Diego" + "granda" // String "Diego de granda"
+
+//Operadores unitarios
+!false //true
+
+
+//Operadores de asignacion
+var a = 1; // a es igual a 1
+3 == "3" //Se compara el valor de 3 con string "3", son iguales, por tanto es true
+3 === "3" //valida que los dos tipos y valores sean extrictamente iguales, los tipos son disitntos por tanto es false
+5 < 3 //false
+5 > 3 //true
+5 <= 6 //true
+
+var edad = 40;
+edad++; //41
+edad += 2 //43
+
+a && b // si a y b son true
+a || b // si a o b es verdadero
+
+
+
+                                                              CONDICIONALES
+                           
+ //IF
+                                                              
+var edad = 18;
+
+if(edad === 18){ // === siginifica exactament igual a...
+    console.log("Puedes votar, será tu primera votación")
+}else if(edad > 18){
+    console.log("Puedes votar de nuevo")
+}else{
+    console.log("aun no puedes votar")
+}
+
+
+var numero = 1;
+
+var resultado = numero === 1 ? "Si soy un uno" : "No, no soy un uno"
+
+
+
+//SWITCH
+
+var numero = 1;
+
+switch(numero){
+    case 1: 
+        console.log("Soy uno");
+        break;
+    case 10: 
+        console.log("Soy un 10");
+        break;
+    default:
+        console.log("No soy nada");
+   
+}
+
+
+
+                                                              ARRAYS
+                                                              
+
+
+var frutas = ["Manzana", "Platano", "Cereza", "Fresa"];
+
+
+//para añadir elemento al final de la lista
+frutas.push("Mora", "Uva")
+
+//para eliminar ultimo elemento del arreglo
+frutas.pop()
+
+//Para agregar elementos a inicio del arreglo
+frutas.unshift("Coco")
+
+//para eliminar elemento del inicio del array
+frutas.shift()
+
+//para obtener posicion de un dato
+var posicion = frutas.indexOf("Cereza")
+
+
+console.log(frutas);
+console.log(frutas.length);
+console.log(frutas[0]);
+
+var articulos = [
+    { nombre: 'Bici', costo: 3000 },
+    { nombre: 'TV', costo: 2500 },
+    { nombre: 'Libro', costo: 320 },
+    { nombre: 'Celular', costo: 10000 },
+    { nombre: 'laptop', costo: 20000 },
+    { nombre: 'teclado', costo: 500 },
+    { nombre: 'audifonos', costo: 1700 }
+]
+
+var articulosFiltrados = articulos.filter(function(articulo){
+    return articulo.costo <= 500
+});
+
+var nombreArticulos = articulos.map(function(articulo){
+    return articulo.nombre;
+});
+
+var encuentraArticulo = articulos.find(function(articulo){
+    return articulo.nombre === "laptop"
+});
+
+articulos.forEach(function(articulo){
+    console.log(articulo.nombre)
+});
+
+var articulosBaratos = articulos.some(function(articulo){
+    return articulo.costo <= 700;
+});
+
+
+
+                                                                    LOOPS
+                                                                  
+
+var estudiantes = ["maria", "sergio", "rosa", "daniel"];
+
+function saludarEstudiantes(estudiante){
+    console.log(`Hola: ${estudiante}`);
+}
+
+for(var i = 0; i <estudiantes.length; i++){
+    saludarEstudiantes(estudiantes[i]);
+}
+
+for(var estudiante of estudiantes){
+    saludarEstudiantes(estudiante);
+}
+
+while(estudiantes.length > 0){
+    var estudiante = estudiantes.shift();
+    saludarEstudiantes(estudiante);
+}
+
+
+
+
+                                                                    OBJECTS
+                                                                    
+                                                                    
+var miAuto = {
+    marca: "toyota",
+    modelo: "Corolla",
+    annio: 2020,
+    datalleDelAuto: function(){
+        console.log(`Auto ${this.modelo} ${this.annio}`)
+    }
+};
+
+
+function auto(marca, modelo, annio) {
+    this.marca = marca;
+    this.modelo = modelo;
+    this.annio = annio;
+};
+
+var autoNuevo = new auto("Audi", "A3", 2023);                                                                    
