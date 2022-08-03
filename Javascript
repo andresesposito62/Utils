@@ -1,0 +1,131 @@
+                                                                        VARIABLES
+                                   
+                                   
+                                   
+                                   
+                                   //Variables primitivas
+
+//Tipo numero
+var numero = 40;
+
+//Tipo String
+var string = "Andres";
+
+//Tipo booleano
+var bool = true;
+var bool = false;
+
+//Tipo null
+var nuleable = null;
+
+//Tipo undefined: lo usamos cuando aun o tenemos el tipo de variable en el momento, es importante evitarlo
+var und = undefined;
+
+
+
+                            //Valores no primitivos o tipo objetos
+
+//Tipo Array
+var array = [1,2,3];
+
+//Tipo objeto
+var object = {nombre: "Diego", edad: 45};
+
+
+
+
+                                                                        OPERACIONES
+      
+
+
+
+//Para consultar el tipo de var usamos
+typeof numero;
+typeof string;
+typeof bool;
+typeof nuleable; // los tipos nulos javascript lo asume que es de tipo objeto
+
+
+//Es debilmentente tipado, por tanto Javascript opera de la siguiente manera:
+
+4 + "7"; //47
+4 * "7"; //28
+2 + true; //3
+false -3; //-3
+
+//=
+var variable = valor
+
+
+
+                                                                        FUNCIONES
+
+//Funciones declarativas
+function miFuncion(){
+    return 3;
+}
+
+miFuncion();
+
+
+//Funciones de expresion  o funciones anonimas
+var miFuncion = function(a, b){
+    return a + b;
+}
+
+miFuncion();
+
+
+Diferencias:
+A las funciones declarativas se les aplica hoisting, y a la expresión de función, no. Ya que el hoisting solo se aplica en las palabras reservadas var y function.
+Lo que quiere decir que con las funciones declarativas, podemos mandar llamar la función antes de que ésta sea declarada, y con la expresión de función, no, tendríamos que declararla primero, y después mandarla llamar.
+
+
+
+
+
+                                                                          SCOPE                                                                          
+                                                                          
+                                                                          
+
+//Scope Global: Contexto donde estan las variables globales, funciones y demas
+//Scope Local: Contexto de lo que esta adentro de las funciones
+
+
+
+                                                                        HOISTING
+                                                                        
+                                                                        
+Es cuando las variable y funciones se declaran antes    de que se procese cualquier tipo de codigo, esto solo pasa con
+versiones pasadas de javascript(EmaScript5 hacia abajo), sucede con las palabras clave var y function. 
+Cuando Javascript detecta que se ha llamado una variable queno ha sido inicializada aun, crea la variable
+y les asigna el tipo undefined.
+Cuando Javascript detecta que se ha llamado una funcion queno ha sido inicializada aun, la ejecuta.
+
+
+Por tal razon, por buenas practicas las funciones y variables se declaran al inicio de la clase.
+
+
+console.log(miNombre);
+var miNombre = "Diego";
+
+
+hey();
+function hey(){
+    console.log("Hola " + miNombre)
+}
+
+
+
+                                                                      COERCION
+                                                                      
+                                                                      
+                                                                      
+//Coerciones Implicitas: el lenguaje nos ayuda y cambia de un tipo de valor a otro tipo de valor
+                                                                      
+//Es debilmentente tipado, por tanto Javascript opera de la siguiente manera:
+
+4 + "7"; //47
+4 * "7"; //28
+2 + true; //3
+false -3; //-3
