@@ -331,4 +331,48 @@ function auto(marca, modelo, annio) {
     this.annio = annio;
 };
 
-var autoNuevo = new auto("Audi", "A3", 2023);                                                                    
+var autoNuevo = new auto("Audi", "A3", 2023);        
+
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+                                                                    ECMAsCRIPT 6
+                                                                    
+                                                                    
+//DEFAULT PARAMS Sin EcmaScript6
+function newFunction(name, age, country){
+    var name = name || 'oscar';//por defecto oscar
+    var age = age || 32;//por defecto 32
+    var country = country || "Colombia";//por defecto colombia
+    console.log(name, age, country);
+}
+
+//DEFAULT PARAMS Con EcmaScript6 
+function newFunction2(name = 'oscar', age = 32, country = "Colombia"){
+    console.log(name, age, country);
+}
+
+newFunction2();
+
+
+
+//let = 
+//Descripción. let te permite declarar variables limitando su alcance (scope) 
+//al bloque, declaración, o expresión donde se está usando. a diferencia de 
+//la palabra clave var la cual define una variable global o local en una función
+//sin importar el ámbito del bloque.
+
+//TEMPLATE LITERAL Sin EcmaScript6
+let hello = "hellow";
+let world = "world";
+let epicPhrase = hello + ' ' + world
+console.log(epicPhrase);
+
+//TEMPLATE LITERALS Con EcmaScript6
+let hello2 = "hellow";
+let world2 = "world";
+let epicPhrase2 = `${hello2} ${world2}`
+console.log(epicPhrase2);                                                                    
