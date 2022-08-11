@@ -1,0 +1,59 @@
+///////////////////////////////////////////////////////// Dart  ////////////////////////////////////////////////////
+
+
+
+/////////////////////////Variables:
+
+-BOOLEANO:
+bool variable = true;
+
+-INT:
+int edad = 20;
+
+-DOUBLE:
+double estatura = 1.65;
+double estaturaEnMetros = 2;
+
+-STRING:
+String datoString = "Hola mundo";
+
+-COLECCIONES:
+List<String> amigos = ["Carlos", "beto"];
+
+-VAR(infiere el tipo de dato)
+var variableInferida = amigos;
+
+-DYNAMIC(infiere  el tipo de dato y permite cambiar el tipo de dato y valor)
+  dynamic variableInferida = "amigos";
+  variableInferida = 15;
+ 
+ -FINAL(se define en tiempo de ejecucion) Y CONST(se define en tiempo de compilacion)
+ final valorFinal = 8;
+ const valorFinal = 8;
+ 
+ 
+ /////////////////////////////Manipulacion de variables
+ 
+ var edad = 5;
+ edad++;
+ ++edad;
+ edad--;
+ --edad;
+ 
+   var edad = 5;  
+  String datoString = "Mi edad es $edad";
+  
+  //Cambiar todos caracteres por mayusculas
+datoString.toUpperCase()
+  
+  ////Cambiar todos caracteres por minusculas
+ datoString.toLowerCase()
+ 
+ 
+ ///////////////////////////////Conversion de variables
+ 
+ 
+  
+  
+  
+
