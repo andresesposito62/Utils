@@ -51,9 +51,77 @@ datoString.toUpperCase()
  
  
  ///////////////////////////////Conversion de variables
- 
- 
+  String datoString = "12";
+  int number = int.parse(datoString);
+  
+  String datoString = "12.5";
+  double number = double.parse(datoString);
+  
+  int dato = 12;
+  String numberString = dato.toString();
   
   
   
+  
+  ///////////////////////////////////////////CONDICIONALES
+  
+  int mascotas = 0;
+  
+  if(mascotas == 0){
+    
+  }else{
+    
+  }
+  
+  
+  
+  switch(mascotas){
+    case 0: 
+      ...
+      break;
+    case 1: 
+      ....
+      break;
+    default:
+  }
+  
+  
+  
+  ////////////////////////////////////////LOOPS
+  
+  while(extr){
+      .....
+  }
+  
+  
+  do{
+      ......  
+  }while(){
+    ....
+  }
+  
+  
+  for(int i; i<5; i++){
+      .....
+  }
+  
+  
+  ///////////////////////////////////////// ENUMERACIONES
+  
+  enum Tiempo {Soleadom, Lluvioso, Despejado}
+  
+  
+  /////////////////////////////////////////COLECCIONES
+  
+  
+  -Listas:
+    List<String> amigos = ["Carlos", "Pedro", "Camila"];
+  
+ -Coleccion Set(es una lista, pero no puede tener valores duplicados):
+   Set <String> paises = {"Argentina", "Colombia"};
 
+-Coleccion Map(colkeccion de pares llave - valor, se le concoe como diccionarios, dodne la llave no se puede repetir):
+    Map <String, dynamic> person = {
+      "nombre": "Ana",
+      "Edad": 12
+    };
