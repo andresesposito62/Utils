@@ -1,0 +1,17 @@
+//Para crear el docker hellow world:
+docker run hello-world
+
+//Para ver los dockers que se estan ejecutando y los que no:
+docker ps -a
+
+//Para ver los dockers que se estan ejecutando:
+docker ps 
+
+//Para ver detalles de un contenedor especifico:
+docker inspect 17855237563b
+
+//para ponerle un nombre a un contenedor(el contenedor es un tipo hello-word):
+docker run --name contenedor-platzi hello-world
+
+//para renombrar un contendero:
+docker rename contenedor-platzi contenedor2-platzi
