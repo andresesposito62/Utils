@@ -15,3 +15,26 @@ docker run --name contenedor-platzi hello-world
 
 //para renombrar un contendero:
 docker rename contenedor-platzi contenedor2-platzi
+
+//Para eliminar un contenedor
+docker rm hello-platzi
+
+//Para eliminar todos los contenedores que estan pausados:
+docker container prune
+
+//Para correr linux
+docker run ubuntu
+
+//Para correr linux sin que se apague ubuntu, con el modo interactivo
+docker run -it ubuntu
+
+//Para correr un contenedor linux sin que se apague la maquina
+//El comando que correrá pra que el contenedor alwaysup no se apague es  /dev/null
+docker run --name alwaysup -d ubuntu tail -f /dev/null
+
+//Para ejecutar un proceso en un contenedor que esta corriendo(en este caso alwaysup), 
+//para este casose corre un shell(bash)
+docker exec -it alwaysup bash
+
+//Para saber el process id 1 (proceso principal)del proceso que corre en la maquina nativa:
+docker inspect --format '{{.State.Pid}}' alwaysup
