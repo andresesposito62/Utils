@@ -38,3 +38,15 @@ docker exec -it alwaysup bash
 
 //Para saber el process id 1 (proceso principal)del proceso que corre en la maquina nativa:
 docker inspect --format '{{.State.Pid}}' alwaysup
+
+//Para parar un docker
+docker stop
+
+//Para borrar un contenedor en ejecucion
+docker rm -f nombreDelContenerdor
+
+//Para instalar un contendor con un servidor web proxy con salida al puerto 8080 de la maquina anfitriona y puerto 80 del contenedor
+docker run --name proxy -p 8080:80 nginx
+
+//Para instalar con detach un contendor con un servidor web proxy con salida al puerto 8080 de la maquina anfitriona y puerto 80 del contenedor
+docker run --name proxy -d -p 8080:80 nginx
