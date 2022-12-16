@@ -13,3 +13,11 @@ https://www.freepik.es/
 link to build README.md file:
 http://editor.md.ipandao.com/en.html
 
+//Para correr un contenedor con mongo db, en detach para que vaya a background
+docker run -d --name db mongo
+
+//Para abrir un bash(consola) en un contenedor(el nombre de este es db)
+docker exec -it db bash
+
+//Para ingresar con el cliente de mongo
+
