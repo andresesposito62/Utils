@@ -50,3 +50,9 @@ docker run --name proxy -p 8080:80 nginx
 
 //Para instalar con detach un contendor con un servidor web proxy con salida al puerto 8080 de la maquina anfitriona y puerto 80 del contenedor
 docker run --name proxy -d -p 8080:80 nginx
+
+//Para crear un BIND MOUNTs(la base de datos de mongo en un contendedor(/data/db mongo) se refleja en la maquina anfitriona(C:\Users\user\Documents\Estudios\Docker\mongodata))
+docker run -d --name db -v C:\Users\user\Documents\Estudios\Docker\mongodata:/data/db mongo
+
+//Para entrar al bash de un contenedor(para est caso con nombre db):
+docker exec -it db bash
