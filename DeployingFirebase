@@ -1,0 +1,8 @@
+Paso 1: En consola en la ruta del hosting: C:\Users\user\Documents\Estudios\Hosting Colossal Hate\colossalhate
+	firebase login
+Paso 2: En la Consola 1(a nivel de raiz del proyecto)
+	flutter build web --release
+Paso 3: Copiamos todo lo de la carpeta C:\Users\user\Documents\Estudios\ColossalHate\build\web
+Paso 4: pegamos lo anterior en la carpeta C:\Users\user\Documents\Estudios\Hosting Colossal Hate\colossalhate\public
+Paso 5: En consola en la ruta C:\Users\user\Documents\Estudios\Hosting Colossal Hate\colossalhate
+	firebase deploy
