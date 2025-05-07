@@ -1,0 +1,37 @@
+--------------------File system hierarchy
+
+
+/ - This is top level directory
+/root - It is home directory for root user
+/home - It is home directory for other users
+/boot - It contains booteable files for linux
+/etc - It contains all configuration files
+/usr - By default software's are installed in this directory
+/bin - It contains commands used by all users
+/sbin - It contains commands used by only root user
+/var - It contanins log files
+
+
+
+--------- Commands
+
+
+date - Displays date
+hostname - To view machine´s hostname
+clear - Clears the terminal
+pwd - Display present working directory
+whoami - Displays the name of the currently logged-in user
+cd - to change to a particular diretcory
+man pwd -information about working directory
+
+
+
+--------------Viewing and reading the files
+
+
+
+ls - list all the files inside the folder
+cat - prints a file´s content, one page at a time
+more & less - view file content, one page at a time
+head - output the first part of files
+tail - output last part of the file
